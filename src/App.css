@@ -1,0 +1,13 @@
+.box{
+  border: 1px solid black;
+  width: 300px;
+}
+
+.item-img{
+  width: 200px;
+}
+
+.main{
+  display: flex;
+  justify-content: center;
+}
