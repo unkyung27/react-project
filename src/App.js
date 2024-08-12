@@ -7,8 +7,7 @@ import Box from "./component/Box";
 const choice = {
   rock:{
     name:"Rock",
-    img:"https://blog.kakaocdn.net/dn/bmjB2s/btqXHhp6kpG/TH14W4U612SxKo9uuR2sB0/img.png"
-  },
+    img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrhBKbtiJuOFPu4sVjkTGX1ecuwt6L3Q6IQg&s"  },
   scissor:{
     name:"Scissor",
     img:"https://thumb.silhouette-ac.com/t/b7/b75c6e473b897538b492e18647a0e5a0_t.jpeg"    
