@@ -3,11 +3,16 @@ import './App.css';
 import Box from "./component/Box";
 
 // 1. 박스 2개
-// 2. 가위바위
+// 2. 가위바위보 버튼 추가
+// 3. 버튼 클릭시 값 + 이미지
+// 4. 컴퓨터는 랜덤 값
+// 5. 승패
+// 6. 승패결과 테두리 색 변화
 const choice = {
   rock:{
     name:"Rock",
-    img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrhBKbtiJuOFPu4sVjkTGX1ecuwt6L3Q6IQg&s"  },
+    img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrhBKbtiJuOFPu4sVjkTGX1ecuwt6L3Q6IQg&s"  
+  },
   scissor:{
     name:"Scissor",
     img:"https://thumb.silhouette-ac.com/t/b7/b75c6e473b897538b492e18647a0e5a0_t.jpeg"    
