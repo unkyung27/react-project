@@ -11,3 +11,18 @@
   display: flex;
   justify-content: center;
 }
+
+.win{
+  border: 1px solid blue;
+  color: blue;
+}
+
+.lose{
+  border: 1px solid red;
+  color: red;
+}
+
+.tie{
+  border: 1px solid yellowgreen;
+  color: yellowgreen;
+}

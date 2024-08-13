@@ -26,18 +26,37 @@ const choice = {
 function App() {
   const [userSelect, setUserSelect] = useState(null);
   const [computerSelect, setComputerSelect] = useState(null);
+  const [result, setResult] = useState(null); // You 결과값
+  const [computerResult, setComputerResult] = useState(null); // Computer 결과값
 
   const play=(userChoice)=>{
     setUserSelect(choice[userChoice]);
     let computerChoice = randomChoice();
     setComputerSelect(computerChoice);
+    let userResult = judgement(choice[userChoice], computerChoice);
+    setResult(userResult);
+    let computerResult = userResult === "TIE" ? "TIE" : userResult === "WIN" ? "LOSE" : "WIN";
+    setComputerResult(computerResult);
+  }
+
+  const judgement = (user, computer) => {
+    console.log("user", user, "computer", computer);
+    if(user.name === computer.name) {
+      return "TIE";
+    }else if(user.name === "Rock") {
+      return computer.name === "Scissor" ? "WIN" : "LOSE";
+    }else if(user.name === "Paper") {
+      return computer.name === "Rock" ? "WIN" : "LOSE";
+    }else if(user.name === "Scissor") {
+      return computer.name === "Paper" ? "WIN" : "LOSE";
+    }
   }
 
   const randomChoice=()=>{
     let itemArray = Object.keys(choice);  // 객체의 키값 뽑아서 array로 만들어 주는 함수
-    console.log("item array: ", itemArray);
+//    console.log("item array: ", itemArray);
     let randomItem = Math.floor(Math.random()*itemArray.length);
-    console.log("random: ", randomItem);
+//    console.log("random: ", randomItem);
     let final = itemArray[randomItem];
     return choice[final];
   }
@@ -45,8 +64,8 @@ function App() {
   return (
     <div>
       <div className="main">
-        <Box title="You" item={userSelect}/>
-        <Box title="Computer" item={computerSelect}/>
+        <Box title="You" item={userSelect} result={result}/>
+        <Box title="Computer" item={computerSelect} result={computerResult}/>
       </div>
       <div className="main">
         <button onClick={() => play("scissor")}>가위</button>
